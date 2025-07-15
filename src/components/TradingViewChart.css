@@ -1,0 +1,72 @@
+.trading-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.trading-modal-content {
+  background: var(--eerie-black-1);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  border: 1px solid var(--white_20);
+}
+
+.trading-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--white_20);
+}
+
+.trading-modal-header h2 {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: var(--white_70);
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background: var(--white_20);
+  color: var(--white);
+}
+
+.trading-chart-container {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .trading-modal {
+    padding: 10px;
+  }
+  
+  .trading-chart-container {
+    padding: 10px;
+  }
+}

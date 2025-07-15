@@ -1,0 +1,461 @@
+/* SellCrypto.css */
+
+/* Main layout */
+.sell-crypto-section {
+  margin: 100px auto 40px; /* Increased top margin to accommodate navbar */
+  padding: 0 24px;
+  max-width: 1400px;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  z-index: 1;
+}
+
+/* Title section */
+.title-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding-top: 20px; /* Added padding to ensure visibility */
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--white_20);
+  opacity: 0;
+  animation: fadeSlideDown 0.6s ease-out forwards;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+
+.section-subtitle {
+  color: var(--white_70);
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+/* Main container */
+.sell-crypto-container {
+  background-color: var(--eerie-black-2);
+  border-radius: 16px;
+  border: 1px solid var(--white_20);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  padding: 32px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Form content */
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Form elements with improved styling */
+.form-group {
+  animation: slideUp 0.4s ease-out forwards;
+  opacity: 0;
+  background: var(--eerie-black-3);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--white_20);
+  transition: all 0.3s ease;
+}
+
+.form-group:hover {
+  border-color: var(--blue-crayola);
+  transform: translateY(-2px);
+}
+
+.form-select, 
+.form-input {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--eerie-black-1);
+  border: 1px solid var(--white_20);
+  border-radius: 12px;
+  color: var(--white);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Enhanced estimated value box */
+.estimated-value {
+  background: var(--eerie-black-3);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--white_20);
+  transition: all 0.3s ease;
+}
+
+.estimated-value:hover {
+  border-color: var(--blue-crayola);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 82, 255, 0.1);
+}
+
+/* Network fee section */
+.network-fee {
+  background: var(--eerie-black-3);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--white_20);
+  transition: all 0.3s ease;
+}
+
+.network-fee:hover {
+  border-color: var(--blue-crayola);
+  transform: translateY(-2px);
+}
+
+/* Enhanced submit button */
+.submit-button {
+  background: var(--blue-crayola);
+  padding: 20px;
+  border-radius: 12px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 82, 255, 0.25);
+}
+
+/* New animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced responsive design */
+@media (max-width: 1440px) {
+  .sell-crypto-section {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sell-crypto-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sell-crypto-section {
+    padding: 16px;
+    margin: 0;
+  }
+
+  .title-wrapper {
+    padding-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .sell-crypto-container {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .form-group {
+    padding: 16px;
+  }
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f9fafb;
+  margin: 0;
+}
+
+.icon {
+  color: #3b82f6;
+}
+
+/* Form elements */
+.form-group {
+  margin-bottom: 0; /* Remove margin since we're using gap */
+  animation: slideUp 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+.form-group:nth-child(2) { animation-delay: 0.1s; }
+.form-group:nth-child(3) { animation-delay: 0.2s; }
+.form-group:nth-child(4) { animation-delay: 0.3s; }
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--white_70);
+}
+
+.form-select, 
+.form-input {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--eerie-black-2);
+  border: 1px solid var(--white_20);
+  border-radius: 12px;
+  color: var(--white);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-select:hover,
+.form-input:hover {
+  border-color: var(--blue-crayola);
+}
+
+.form-select:focus,
+.form-input:focus {
+  outline: none;
+  border-color: var(--blue-crayola);
+  box-shadow: 0 0 0 3px rgba(0, 82, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Input with suffix */
+.relative {
+  position: relative;
+}
+
+.input-suffix {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-top: 12px;
+}
+
+/* Estimated value box */
+.estimated-value {
+  padding: 24px;
+  margin: 12px 0;
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--eerie-black-2);
+  border-radius: 12px;
+  border: 1px solid var(--white_20);
+  transition: transform 0.3s ease;
+}
+
+.estimated-value:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue-crayola);
+}
+
+.estimated-label {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0 0 4px 0;
+}
+
+.estimated-amount {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--white);
+  margin-top: 4px;
+}
+
+/* Warning message */
+.warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background-color: rgba(251, 191, 36, 0.1);
+  border-radius: 8px;
+  margin-top: 16px;
+  color: #fbbf24;
+}
+
+.warning .icon {
+  color: #fbbf24;
+  margin-top: 2px;
+}
+
+.warning p {
+  margin: 0;
+}
+
+/* Network fee section */
+.network-fee {
+  padding: 24px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--eerie-black-2);
+  border-radius: 12px;
+  border: 1px solid var(--white_20);
+}
+
+.fee-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.fee-details:last-child {
+  margin-bottom: 0;
+}
+
+.fee-label {
+  color: #9ca3af;
+}
+
+.fee-amount {
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+/* Submit button */
+.submit-button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 20px;
+  background: linear-gradient(45deg, var(--blue-crayola), #3b82f6);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 82, 255, 0.25);
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.submit-button:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1440px) {
+  .sell-crypto-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sell-crypto-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sell-crypto-container {
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+    border-radius: 0;
+  }
+
+  .form-content {
+    gap: 24px;
+  }
+
+  .form-select, 
+  .form-input {
+    padding: 12px;
+  }
+  
+  .sell-crypto-section,
+  .crypto-buy-section {
+    margin-top: 80px; /* Adjust for smaller screens */
+  }
+}
